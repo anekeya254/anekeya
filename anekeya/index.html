@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Joseph Ongaka - Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Important for mobile -->
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #2980b9, #6dd5fa, #ffffff);
+    }
+
+    .container {
+      text-align: center;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      max-width: 400px;
+      width: 90%; /* makes it shrink nicely on small screens */
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .profile-pic {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid #2980b9;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      transition: transform 0.3s;
+    }
+
+    .profile-pic:hover {
+      transform: scale(1.05);
+    }
+
+    h1 {
+      margin-top: 20px;
+      font-size: 28px;
+      color: #2c3e50;
+      letter-spacing: 1px;
+    }
+
+    .btn {
+      margin-top: 30px;
+      padding: 12px 25px;
+      background: #2980b9;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .btn:hover {
+      background: #1f6391;
+      transform: translateY(-2px);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* 📱 Mobile adjustments */
+    @media (max-width: 480px) {
+      .container {
+        padding: 20px;
+      }
+      .profile-pic {
+        width: 120px;
+        height: 120px;
+      }
+      h1 {
+        font-size: 22px;
+      }
+      .btn {
+        font-size: 14px;
+        padding: 10px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Replace with your actual image path -->
+    <img src="images/bwire.jpg" alt="Joseph Ongaka" class="profile-pic">
+    <h1>Joseph Ongaka</h1>
+    <button class="btn" onclick="window.location.href='details.html'">
+      View More Details
+    </button>
+  </div>
+</body>
+</html>
